@@ -26,6 +26,7 @@ nav
     justify-content: space-around;
     height: 10vh;
     width: 100%;
+    background-color: white;
 }
 
 nav ul
@@ -46,6 +47,11 @@ nav ul li:hover
     transition: .3s;
 }
 
+nav ul li a
+{
+    color: black;
+    text-decoration: none;
+}
 /* HEADER: CONTEÚDO BANNER */
 
 #banner_header
@@ -299,5 +305,114 @@ footer
 {
     background-color: white;
     width: 100%;
-    height: 20vh;
+}
+
+footer #contact form
+{
+    margin: 2em auto;
+    width: 35em;
+    background-color: rgb(58, 58, 58);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.336);
+    padding: 3em;
+}
+
+footer #contact form label, footer #contact form input, footer #contact form button, footer #contact form textarea
+{
+    display: block;
+}
+
+footer #contact form textarea, footer #contact form input, footer #contact form button
+{
+    margin: 0px auto;
+    width: 30em;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+footer #contact form label
+{
+    position: relative;
+    top: -2.9em;
+    left: 4em;
+    pointer-events: none;
+    color: rgb(148, 148, 148);
+}
+
+footer #contact form #txt_arealabel
+{
+    top: -14em;
+}
+
+footer #contact form textarea
+{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-top: 1em;
+    border-radius: 20px;
+    resize: none;
+}
+
+footer #contact form input
+{
+    height: 3em;
+    padding-left: 1.12em;
+    margin-bottom: 1em;
+}
+
+footer #contact form button
+{
+    margin-top: 2em;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 4em;
+}
+
+footer #contact form input:focus ~ #email_lb 
+{
+    transform: translateY(-35px);
+    transition: .3s;
+    color: rgb(255, 255, 255);
+}
+
+footer #contact form textarea:focus ~ label 
+{
+    transform: translateY(-40px);
+    transition: .3s;
+    color: rgb(255, 255, 255);
+}
+
+footer #contact form input:valid ~ #email_lb
+{
+    transform: translateY(-35px);
+    transition: .3s;
+    color: rgb(255, 255, 255);
+}
+
+footer #contact form textarea:valid ~ label
+{
+    transform: translateY(-40px);
+    transition: .3s;
+    color: rgb(255, 255, 255);
+}
+
+footer #contact form button:hover
+{
+    width: 32.5em;
+    transition: .3s;
+    background-color: rgb(221, 221, 221);
+}
+
+footer #contact form h2
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+footer #contact form input
+{
+    padding-left: 2.5em;
+    padding-right: 2.5em;
 }

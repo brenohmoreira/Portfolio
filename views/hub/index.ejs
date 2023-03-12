@@ -12,11 +12,11 @@
     <header>
         <nav>
             <h1> &lt;/Myfolio&gt; </h1>
-
+        
             <ul>
-                <li> <a> Sobre mim </a> </li>
-                <li> <a> Projetos </a> </li>
-                <li> <a> Contato </a> </li>
+                <li> <a href="#sobre"> Sobre mim </a> </li>
+                <li> <a href="#projetos"> Projetos </a> </li>
+                <li> <a href="#contato"> Contato </a> </li>
             </ul>
         </nav>
 
@@ -60,7 +60,7 @@
                     <img src="img/me.png">
                 </div>
                 <div id="text_me">
-                    <h2> Sobre mim </h2>
+                    <h2 id="sobre"> Sobre mim </h2>
                     <hr>
                     <p> Meu nome é Breno, nasci no dia 01/10/2004 e possuo grande fascínio pelo mundo da tecnologia. </p>
                     <p> Tive minhas primeiras aulas de programação no primeiro ano do ensino médio integrado ao técnico em informática no IFSP e me interessei pela área, começando meus estudos individuais. </p>
@@ -71,7 +71,7 @@
 
         <div id="projects">
             <div id="projects_title">
-                <h2> PROJETOS RECENTES: </h2>
+                <h2 id="projetos"> PROJETOS RECENTES: </h2>
             </div>
             <div id="projects_all">
                 <div id="project_one" class="projects">
@@ -95,14 +95,23 @@
         </div>
 
         <div id="see_all">
-            <button> VER TODOS </button>
+            <button onclick="location.href='/see-all'"> VER TODOS </button>
         </div>
     </main>
 
     <footer>
         <div id="contact">
-
+            <form>
+                <h2 id="contato"> Contato: </h2>
+                <input type="text"required>
+                <label id="email_lb"> Digite seu e-mail </label>
+                <textarea required rows="10"></textarea>
+                <label id="txt_arealabel"> Digite sua mensagem </label>
+                <button> Enviar </button> 
+            </form>
         </div>
     </footer>
+
+    <script src="js/scroll.js"></script>
 </body>
 </html>

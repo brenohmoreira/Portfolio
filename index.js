@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
     res.render("hub/index.ejs");
 });
 
+app.get("/see-all", (req, res) => {
+    res.render("hub/see-all.ejs");
+});
+
 app.listen(8080, () => {
     console.log("Server open");
 });
