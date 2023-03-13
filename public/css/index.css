@@ -1,7 +1,27 @@
+/* ANIMAÇÕES E FONTES */
+
 @font-face {
     font-family: poppins;
     src: url(../fonts/Poppins-Regular.ttf);
 }
+
+@keyframes typing
+{
+    from
+    {
+        width: 0;
+    }
+}
+
+@keyframes blinking
+{
+    50%
+    {
+        border-right-color: transparent;
+    }
+}
+
+/* CONFIG GERAL */
 
 *
 {
@@ -17,6 +37,16 @@ body
     height: 100%;
 }
 
+body::-webkit-scrollbar
+{
+    background-color: #282544;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+}
+
 /* HEADER: BARRA DE NAVEGAÇÃO */
 
 nav
@@ -26,7 +56,11 @@ nav
     justify-content: space-around;
     height: 10vh;
     width: 100%;
-    background-color: white;
+    position: fixed;
+    background-color: #282544;
+    color: white;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    z-index: 1;
 }
 
 nav ul
@@ -49,14 +83,14 @@ nav ul li:hover
 
 nav ul li a
 {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 /* HEADER: CONTEÚDO BANNER */
 
 #banner_header
 {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     display: flex;
 }
@@ -68,20 +102,45 @@ nav ul li a
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 4em;
+    left: 5em;
 }
 
-#text_bannerheader h2
+#text_bannerheader h1
+{
+    white-space: nowrap;
+}
+
+#text_bannerheader p
 {
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-right: 3px solid;
+    display: inline-block;
+    width: 285px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    animation: typing 2s steps(19), blinking 0.5s infinite step-end alternate;
+}
+
+#text_bannerheader #text-p
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 #text_bannerheader button
 {
     width: 80%;
     height: 3.8em;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+    background-color: #282544;
+    color: rgb(255, 255, 255);
+    border: none;
     border-radius: 50px;
     display: block;
     margin: 0 auto;
@@ -102,11 +161,15 @@ nav ul li a
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 4em;
 }
 
 #img_bannerheader img
 {
-    width: 20vw;
+    width: 35em;
+    position: relative;
+    right: 5em;
 }
 
 #bannerheader_icons
@@ -121,6 +184,7 @@ nav ul li a
 {
     width: 64px;
     margin: 3px;
+    cursor: pointer;
 }
 
 /* MAIN: ABOUT_ME */
@@ -129,7 +193,7 @@ main #about_me
 {
     width: 100%;
     height: 100vh;
-    background-color: rgb(58, 58, 58);
+    background-color: #fccc44;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,8 +252,8 @@ main #tecnologias
     padding-top: 6em;
     width: 100%;
     height: 30vh;
-    background-color: rgb(58, 58, 58);
-    color: white;
+    background-color: #fccc44;
+    color: rgb(0, 0, 0);
 }
 
 main #tecnologias #list_tec
@@ -220,7 +284,7 @@ main #projects
 {
     width: 100%;
     height: 100vh;
-    background-color: rgb(58, 58, 58);
+    background-color: #fccc44;
 }
 
 main .projects
@@ -233,7 +297,6 @@ main .projects
 
 main .projects:hover
 {
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.377);
     background-color: rgb(221, 221, 221);
     transition: .4s;
 }
@@ -242,11 +305,12 @@ main .projects .em_producao
 {
     width: 100%;
     height: 5em;
-    background-color: yellow;
+    background-color: #282544;
     margin: 17em auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 main .projects .em_producao h1
@@ -263,16 +327,18 @@ main #projects #projects_all
 
 main #projects #projects_title h2
 {
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     margin-bottom: 1.7em;
+    position: relative;
+    top: -2em;
 }
 
 main #see_all 
 {
     width: 100%;
     height: 7em;
-    background-color: rgb(58, 58, 58);
+    background-color: #fccc44;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,20 +348,17 @@ main #see_all button
 {
     display: block;
     margin-bottom: 2.5em;
-    width: 20em;
+    width: 30em;
     height: 3.5em;
-    background-color: rgb(58, 58, 58);
+    background-color: #282544;
     border-radius: 50px;
-    border: 1px solid white;
+    border: none;
     color: white;
 }
 
 main #see_all button:hover
 {
-    width: 25em;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    width: 35em;
     transition: .3s;
 }
 
@@ -311,7 +374,7 @@ footer #contact form
 {
     margin: 2em auto;
     width: 35em;
-    background-color: rgb(58, 58, 58);
+    background-color: #282544;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.336);
     padding: 3em;
 }

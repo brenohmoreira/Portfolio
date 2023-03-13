@@ -34,7 +34,7 @@ function scrollToIdOnClick(event)
     } else if (id === '#projetos')
     {
         window.scroll({
-            top: to - 30,
+            top: to + 30,
             behavior: "smooth"
         });
     }
